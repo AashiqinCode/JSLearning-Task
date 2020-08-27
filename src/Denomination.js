@@ -7,7 +7,7 @@ const DenoComponent = (props) => {
 
   let total = amount;
 
-  console.log(amount,show)
+  // console.log(amount, show);
   if (show) {
     for (let i = 0; i < denomination.length; i++) {
       resultArray.push(Math.floor(total / denomination[i]));
@@ -16,12 +16,14 @@ const DenoComponent = (props) => {
     }
     return (
       <div>
-        <h4> Denomination Fetched: </h4>
-        <div> ₹2000 x {resultArray[0]} </div>{" "}
-        <div> ₹500 x {resultArray[1]} </div>{" "}
-        <div> ₹200 x {resultArray[2]} </div>{" "}
-        <div> ₹100 x {resultArray[3]} </div> <br />
-        <div> Total: {amount} </div>{" "}
+        <h4 style={{ color: "#144F36" }}> Denomination Fetched: </h4>
+        <div className="font-weight-bold">
+          <div> ₹2000 x {resultArray[0]} </div>{" "}
+          <div> ₹500 x {resultArray[1]} </div>{" "}
+          <div> ₹200 x {resultArray[2]} </div>{" "}
+          <div> ₹100 x {resultArray[3]} </div> <br />
+          <div> Total: {amount} </div>{" "}
+        </div>
       </div>
     );
   } else {

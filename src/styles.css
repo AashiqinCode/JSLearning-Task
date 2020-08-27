@@ -1,6 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+html,body{
+  background-color: #141414;
+  color: white;
+}
 .App {
   font-family: sans-serif;
   /* text-align: center; */
   /* margin: auto; */
   margin: 50px auto;
+  
+}
+.title {
+  font-family: "Open Sans", sans-serif;
+  color: #18769C;
 }
