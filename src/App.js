@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-
 import "./styles.css";
 import DenoComponent from "./Denomination";
 
 export default function App() {
   const [amount, setAmount] = useState(0);
+
+  const moneyHandler = (e) => {
+    setAmount(e.target.value);
+  };
 
   return (
     <div className="App">
@@ -18,18 +21,20 @@ export default function App() {
             className="form-control"
             id="amount"
             placeholder="Enter Amount"
+            onChange={(e) => {
+              moneyHandler(e);
+            }}
           />
         </div>
         <button
           type="button"
           className="btn btn-light"
-          onClick={(e) => {
-            setAmount(e.target.value);
+          onClick={() => {
+            return <DenoComponent amount={amount} />;
           }}
         >
           Withdrawl
         </button>
-        <DenoComponent amount={amount} />
       </form>
     </div>
   );
